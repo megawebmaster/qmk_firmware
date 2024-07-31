@@ -80,7 +80,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      _______, KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,                              KC_UNDS, KC_PMNS, KC_PPLS, KC_PEQL, KC_NO,   _______,
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
   // _______, KC_MRWD, KC_MFFD, KC_VOLU, KC_PGUP, KC_UNDS,                            KC_PEQL, KC_RCBR, KC_LCBR, KC_HOME, KC_NO,   _______,
-     _______, KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,                              KC_NO,   KC_VOLD, KC_VOLU, KC_NO,   KC_NO,   _______,
+     _______, KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,                              KC_MUTE, KC_VOLD, KC_VOLU, KC_NO,   KC_NO,   _______,
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
   // _______, KC_MSTP, KC_MPLY, KC_VOLD, KC_PGDN, KC_MINS, KC_NO,            KC_NO,   KC_PPLS, KC_RBRC, KC_LBRC, KC_END,  KC_NO,   _______,
      _______, KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,            KC_NO,   KC_MRWD, KC_MSTP, KC_MPLY, KC_MFFD, KC_NO,   _______,
@@ -137,7 +137,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      _______, KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,                              KC_UNDS, KC_PMNS, KC_PPLS, KC_PEQL, KC_NO,   _______,
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
   // _______, KC_MRWD, KC_MFFD, KC_VOLU, KC_PGUP, KC_UNDS,                            KC_PEQL, KC_RCBR, KC_LCBR, KC_HOME, KC_NO,   _______,
-     _______, KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,                              KC_NO,   KC_VOLD, KC_VOLU, KC_NO,   KC_NO,   _______,
+     _______, KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,                              KC_MUTE, KC_VOLD, KC_VOLU, KC_NO,   KC_NO,   _______,
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
   // _______, KC_MSTP, KC_MPLY, KC_VOLD, KC_PGDN, KC_MINS, KC_NO,            KC_NO,   KC_PPLS, KC_RBRC, KC_LBRC, KC_END,  KC_NO,   _______,
      _______, KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,            KC_NO,   KC_MRWD, KC_MSTP, KC_MPLY, KC_MFFD, KC_NO,   _______,
