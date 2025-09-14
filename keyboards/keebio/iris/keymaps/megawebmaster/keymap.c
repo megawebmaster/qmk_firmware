@@ -68,7 +68,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //├────────┼────────────────┼────────────────┼────────────────┼────────────────┼────────┤                          ├────────┼────────────────┼────────────────┼────────────────┼────────────────┼────────┤
      KC_F1,   KC_F2,           KC_F3,           KC_F4,           KC_F5,           KC_F6,                              KC_6,    KC_7,            KC_8,            KC_9,            KC_0,            _______,
   //├────────┼────────────────┼────────────────┼────────────────┼────────────────┼────────┤                          ├────────┼────────────────┼────────────────┼────────────────┼────────────────┼────────┤
-     _______, LGUI_T(KC_PPLS), LALT_T(KC_PMNS), LCTL_T(KC_PEQL), LSFT_T(KC_UNDS), KC_NO,                              KC_MUTE, RSFT_T(KC_VOLD), RCTL_T(KC_VOLU), KC_LALT,         KC_RGUI,         _______,
+     _______, LGUI_T(KC_PPLS), LALT_T(KC_PEQL), LCTL_T(KC_PMNS), LSFT_T(KC_UNDS), KC_NO,                              KC_MUTE, RSFT_T(KC_VOLD), RCTL_T(KC_VOLU), KC_LALT,         KC_RGUI,         _______,
   //├────────┼────────────────┼────────────────┼────────────────┼────────────────┼────────┼────────┐        ┌────────┼────────┼────────────────┼────────────────┼────────────────┼────────────────┼────────┤
      _______, KC_NO,           KC_NO,           KC_NO,           KC_NO,           KC_NO,   KC_NO,            KC_NO,   KC_MRWD, KC_MSTP,         KC_MPLY,         KC_MFFD,         KC_NO,           _______,
   //└────────┴────────────────┴────────────────┴───────────┬────┴──────┬─────────┴─┬──────┴───┬────┘        └────┬───┴──────┬─┴─────────┬──────┴────┬───────────┴────────────────┴────────────────┴────────┘
@@ -120,6 +120,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   )
 };
 
+const char chordal_hold_layout[MATRIX_ROWS][MATRIX_COLS] PROGMEM =
+    LAYOUT(
+        'L', 'L', 'L', 'L', 'L', 'L',           'R', 'R', 'R', 'R', 'R', 'R',
+        'L', 'L', 'L', 'L', 'L', 'L',           'R', 'R', 'R', 'R', 'R', 'R',
+        'L', 'L', 'L', 'L', 'L', 'L',           'R', 'R', 'R', 'R', 'R', 'R',
+        'L', 'L', 'L', 'L', 'L', 'L', '*', '*', 'R', 'R', 'R', 'R', 'R', 'R',
+                            '*', '*', '*', '*', '*', '*'
+    );
+
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
     case BASE_LNX:
@@ -169,6 +178,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case LCTL_T(KC_RCBR):
       if (record->event.pressed && record->tap.count) {
         tap_code16(KC_RCBR);
+        return false;
+      }
+      break;
+    case LSFT_T(KC_UNDS):
+      if (record->event.pressed && record->tap.count) {
+        tap_code16(KC_UNDS);
         return false;
       }
       break;
